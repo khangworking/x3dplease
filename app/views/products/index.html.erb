@@ -1,0 +1,6 @@
+<div class="w-full">
+  <% @products.each do |product| %>
+    <%= image_tag product.image.variant(:thumbnail) %>
+    <%= product.name %>
+  <% end %>
+</div>
