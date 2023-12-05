@@ -28,6 +28,9 @@ class Product < ApplicationRecord
   validates :status, inclusion: { in: statuses.keys }
 
   def thumb_url
-    Rails.application.routes.url_helpers.rails_representation_url(image.variant(:thumbnail).processed, only_path: true)
+    Rails.application.routes.url_helpers.rails_representation_url(
+      image.variant(:thumbnail).processed,
+      only_path: true
+    )
   end
 end
